@@ -1,0 +1,265 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: #f5efe6; /* cream parchment */
+  color: #3b2f2f; /* dark brown */
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO / PROFILE
+========================= */
+.hero {
+  padding: 6rem 1.5rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background-color: #fff8ef;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 14px 34px rgba(59, 47, 47, 0.15);
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #8b5e3c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text h1 {
+  font-size: 2.6rem;
+  color: #5a3825;
+}
+
+.profile-text h2 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #7a5a44;
+  margin-bottom: 1.5rem;
+}
+
+.intro {
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #5a3825;
+  border: 2px solid #8b5e3c;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+  background-color: #8b5e3c;
+  color: #fff8ef;
+}
+
+/* =========================
+   SECTION BASE
+========================= */
+section {
+  padding: 5rem 1.5rem;
+  border-top: 2px solid #e0c9b1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #5a3825;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   GAMEPLAY SECTION
+========================= */
+.gameplay {
+  background-color: #f0e6d8;
+}
+
+.gameplay-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gameplay-track {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.gameplay-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gameplay-track::-webkit-scrollbar-thumb {
+  background-color: #8b5e3c;
+  border-radius: 4px;
+}
+
+.gameplay-card {
+  min-width: 480px;
+  flex: 0 0 auto;
+  background-color: #fff8ef;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 16px 34px rgba(59, 47, 47, 0.18);
+  scroll-snap-align: start;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.gameplay-card video {
+  width: 100%;
+  height: 270px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  background-color: #000;
+}
+
+.gameplay-card p {
+  font-size: 1.1rem;
+  color: #4a3728;
+  font-weight: 500;
+}
+
+/* =========================
+   SCROLL BUTTONS
+========================= */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #8b5e3c;
+  color: #fff8ef;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.25s;
+}
+
+.scroll-btn:hover {
+  background-color: #5a3825;
+}
+
+.scroll-btn.prev {
+  left: -20px;
+}
+
+.scroll-btn.next {
+  right: -20px;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.skills {
+  background-color: #f5efe6;
+}
+
+.skills-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
+}
+
+.skill-card {
+  background-color: #fff8ef;
+  padding: 1.3rem;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: #5a3825;
+  border: 2px solid #e0c9b1;
+  box-shadow: 0 8px 20px rgba(59, 47, 47, 0.12);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .gameplay-card {
+    min-width: 320px;
+  }
+
+  .scroll-btn.prev {
+    left: -10px;
+  }
+
+  .scroll-btn.next {
+    right: -10px;
+  }
+
+  .gameplay-card video {
+    height: 220px;
+  }
+}
+
+/* =========================
+   HOVER EFFECT FOR CARDS (OPTIONAL POLISH)
+========================= */
+.gameplay-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(59, 47, 47, 0.2);
+}
