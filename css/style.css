@@ -159,7 +159,32 @@ section {
   color: #4a3728;
   font-weight: 500;
 }
+/* =========================
+   PLAY GAME BUTTON
+========================= */
+.play-game-container {
+  margin-top: 3rem;
+  text-align: center;
+}
 
+.play-game-btn {
+  display: inline-block;
+  background-color: #8b5e3c;
+  color: #fff8ef;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(59, 47, 47, 0.2);
+}
+
+.play-game-btn:hover {
+  background-color: #5a3825;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(59, 47, 47, 0.25);
+}
 /* =========================
    SCROLL BUTTONS
 ========================= */
